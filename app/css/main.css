@@ -121,3 +121,70 @@
     color: #fff;
     text-decoration: none;
     padding: 20px 40px; }
+
+.team {
+  font-family: "Open sans";
+  color: #4e525d; }
+
+.team__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-bottom: 100px; }
+
+.section__heading {
+  font-size: 42px;
+  text-align: center;
+  margin: 100px auto; }
+
+.container {
+  width: 99%;
+  max-width: 1170px;
+  margin: 0 auto; }
+
+.team__item {
+  margin-top: 30px;
+  text-align: center; }
+  .team__item span {
+    display: block; }
+
+.team__item__pic {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto; }
+
+.team__item__name {
+  font-size: 22px;
+  margin-top: 70px; }
+
+.team__item__post {
+  font-size: 14px;
+  margin-top: 10px; }
+
+.team__item__description {
+  font-size: 14px;
+  line-height: 26px;
+  padding: 15px;
+  margin-top: 15px; }
+
+@media screen and (max-width: 980px) {
+  /* section main */
+  .main-menu__item:last-child {
+    margin-right: 15px; }
+  /* section team */
+  .section__heading {
+    margin: 50px auto; }
+  .team__item__pic {
+    display: block;
+    width: 150px;
+    height: 150px; }
+  .team__item__name {
+    margin-top: 20px;
+    font-size: 18px; } }
+
+@media screen and (max-width: 780px) {
+  .team__list {
+    flex-wrap: wrap; }
+  .team__item {
+    width: 45%; } }

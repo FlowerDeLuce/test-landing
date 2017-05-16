@@ -1,0 +1,34 @@
+$break-small: 640px
+$break-medium: 780px
+$break-large: 980px
+
+@media screen and (max-width: $break-large) 
+
+	/* section main */
+
+	.main-menu__item
+		&:last-child
+			margin-right: 15px	
+
+	/* section team */
+
+	.section__heading
+		margin: 50px auto
+
+	
+	.team__item__pic
+		display: block
+		width: 150px
+		height: 150px	
+
+	.team__item__name	
+		margin-top: 20px
+		font-size: 18px
+
+
+@media screen and (max-width: $break-medium) 
+	.team__list
+		flex-wrap: wrap
+		
+	.team__item
+		width: 45%
