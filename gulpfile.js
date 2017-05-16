@@ -21,5 +21,5 @@ var gulp = require('gulp'),
 	
 	gulp.task('watch',['browser-sync', 'sass'], function(){
 		gulp.watch('app/sass/*.sass', ['sass']);
-		gulp.watch('app/*.html', browserSync.reload);
+		gulp.watch('dist/*.html', browserSync.reload);
 	});
