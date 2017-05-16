@@ -5,7 +5,7 @@ var gulp = require('gulp'),
 	gulp.task('sass', function(){
 		return gulp.src('app/sass/main.sass')
 		.pipe(sass())
-		.pipe(gulp.dest('app/css'))
+		.pipe(gulp.dest('dist/css'))
 		.pipe(browserSync.reload({stream: true}))
 	});
 	
@@ -13,7 +13,7 @@ var gulp = require('gulp'),
 	gulp.task('browser-sync', function(){
 		browserSync({
 			server: {
-				baseDir: 'app'
+				baseDir: 'dist'
 			}
 		});
 		
