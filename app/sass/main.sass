@@ -1,0 +1,128 @@
+@font-face
+	font-family: "Lobster"
+	src: url('fonts/Lobster.ttf')
+
+
+*
+	padding: 0
+	margin: 0
+	
+	
+.header
+	width: 100%
+	background: #fff
+
+.header-container
+	display: flex
+	justify-content: space-between
+	max-width: 1440px
+	margin: 0 auto
+.header__logo
+	vertical-align: middle
+	span
+		display: block
+		font-family: Lobster, sans-serif
+		font-size: 43px
+		color: #44c0c2
+		vertical-align: middle
+		padding: 20px
+.main-menu
+	display: inline-block
+	vertical-align: middle
+
+.main-menu__item
+	display: inline-block
+	list-style-type: none
+	&:last-child
+		margin-right: 115px	
+	
+
+.main-menu__link
+	box-sizing: border-box
+	display: inline-block
+	font-size: 15px
+	color: #484c55
+	text-decoration: none
+	vertical-align: middle
+	padding: 40px 20px
+	&:hover
+		background-color: #f8f9fb
+		border-bottom: 3px solid #49cbcd
+		padding-bottom: 37px
+	
+.banner
+	box-sizing: border-box
+	width: 100%
+	margin: 0 auto
+	min-height: 100vh
+	
+	position: relative
+	
+.banner__slider
+	position: absolute
+.slider-item
+	width: 100%	
+	img
+		width: 100%
+		min-height: 100vh
+		height: 565px
+
+	
+	
+		
+
+.slick-arrow
+	position: absolute
+	top: 50%
+	
+
+.banner__slider__next
+	right: 0
+	margin-right: 30px
+
+.banner__slider__prev
+	left: 0
+	margin-left: 30px
+.banner__slider__next, .banner__slider__prev
+	z-index: 2
+	cursor: pointer
+
+.banner__text
+	width: 100%
+	position: absolute
+	top: 0
+	display: flex
+	flex-wrap: wrap
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	padding-bottom: 20px
+
+.banner__heading
+	margin-left: -20px
+	font-family: 'Open sans'
+	font-weight: normal
+	font-size: 63px
+	color: #fff
+	margin-top: 130px
+	
+.banner__description 
+	color: #fff
+	margin-top: 40px
+	line-height: 37px
+	max-width: 30%
+	text-align: center
+	font-size: 23px
+	font-family: 'Open sans'
+	font-weight: 400
+	
+.banner__btn
+	margin-top: 60px
+	color: #fff
+	border: 3px solid #fff
+	border-radius: 5px
+	a
+		display: block
+		color: #fff
+		text-decoration: none
+		padding: 20px 40px
