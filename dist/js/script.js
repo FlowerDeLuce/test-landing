@@ -10,5 +10,11 @@ dots: false,
   
 	});
 	
+	$('.plan__button').hover( function(){
+		$(this).parent('.plans__item').find('.plans__item__heading').css({'backgroundColor' : '#49cbcd'})
+	},
+		function(){
+			$(this).parent('.plans__item').find('.plans__item__heading').css({'backgroundColor' : '#485460'});
+});
 	
 });

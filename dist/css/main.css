@@ -18,6 +18,7 @@ body {
   background: #fff;
   position: fixed;
   z-index: 10;
+  height: 98px;
   margin-top: -98px; }
 
 .header-container {
@@ -221,6 +222,8 @@ body {
 
 .plan__button {
   margin: 40px auto 30px; }
+  .plan__button:hover .plan__btn {
+    background: #49cbcd; }
 
 .plan__btn {
   text-decoration: none;
