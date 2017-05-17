@@ -237,7 +237,8 @@ body {
   color: #fff;
   padding: 10px 50px;
   border: none;
-  border-radius: 4px; }
+  border-radius: 4px;
+  box-sizing: border-box; }
 
 .contacts {
   font-family: 'Open sans', sans-serif;
@@ -274,6 +275,8 @@ body {
 
 .social-item {
   margin-right: 15px; }
+  .social-item:last-child {
+    margin-right: 0; }
 
 .social-pic {
   width: 40px;
@@ -420,7 +423,61 @@ body {
   .main-menu--mobile-bottom {
     top: 60px;
     transition: all .5s; }
+  .banner__heading {
+    font-size: 40px; }
+  .banner__description {
+    font-size: 18px; }
+  .team {
+    padding-top: 0; }
   .team__list {
     flex-wrap: wrap; }
   .team__item {
-    width: 45%; } }
+    width: 45%; }
+  .plans__item__heading, .plans__item__price {
+    padding: 10px;
+    font-size: 16px; }
+  .plans__item__benefit {
+    font-size: 14px;
+    padding: 10px; }
+  .contacts {
+    padding: 10px 0; }
+  .contacts__holder {
+    margin-top: 0;
+    flex-wrap: wrap;
+    justify-content: center; }
+  .contacts__info {
+    width: 98%;
+    margin: 0 auto;
+    text-align: center; }
+  .social-list {
+    width: 98%;
+    justify-content: center; }
+  .contacts__form-holder {
+    width: 98%;
+    margin: 20px auto 0;
+    max-width: 500px;
+    text-align: center; }
+  .submit__btn {
+    float: none;
+    margin: 20px auto;
+    font-size: 16px; } }
+
+@media screen and (max-width: 640px) {
+  .banner__heading {
+    margin-top: 50px;
+    font-size: 24px; }
+  .banner__description {
+    font-size: 14px;
+    max-width: 55%; }
+  .plan__btn {
+    font-size: 14px;
+    padding: 10px 25px; } }
+
+@media screen and (max-width: 480px) {
+  html, body {
+    min-width: 320px; }
+  .team__item, .plans__item {
+    width: 80%;
+    margin: 20px auto; }
+  .plans__list {
+    flex-wrap: wrap; } }

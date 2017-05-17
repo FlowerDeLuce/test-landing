@@ -1,14 +1,15 @@
+$break-smallest: 480px
 $break-small: 640px
 $break-medium: 780px
-$break-large: 980px
-$break-big: 1040px
+$break-big: 980px
+$break-large: 1040px
 
-@media screen and (max-width: $break-big) 
+@media screen and (max-width: $break-large) 
 	#name, #email
 		width: 48%
 
 
-@media screen and (max-width: $break-large) 
+@media screen and (max-width: $break-big) 
 
 	/* section main */
 
@@ -104,8 +105,78 @@ $break-big: 1040px
 		top: 60px
 		transition: all .5s	
 
+	.banner__heading
+		font-size: 40px
+
+	.banner__description	
+		font-size: 18px
+
+	.team
+		padding-top: 0	
+
 	.team__list
 		flex-wrap: wrap
 		
 	.team__item
 		width: 45%
+
+	.plans__item__heading, .plans__item__price
+		padding: 10px
+		font-size: 16px	
+
+	.plans__item__benefit
+		font-size: 14px
+		padding: 10px
+
+	.contacts
+		padding: 10px 0
+
+	.contacts__holder
+		margin-top: 0
+		flex-wrap: wrap
+		justify-content: center
+
+	.contacts__info
+		width: 98%
+		margin: 0 auto
+		text-align: center	
+
+	.social-list
+		width: 98%
+		justify-content: center
+
+	.contacts__form-holder
+		width: 98%
+		margin: 20px auto 0
+		max-width: 500px
+		text-align: center
+
+	.submit__btn
+		float: none
+		margin: 20px auto
+		font-size: 16px
+
+@media screen and (max-width: $break-small) 
+	
+	.banner__heading
+		margin-top: 50px
+		font-size: 24px
+
+	.banner__description
+		font-size: 14px	
+		max-width: 55%
+
+	.plan__btn	
+		font-size: 14px
+		padding: 10px 25px
+
+@media screen and (max-width: $break-smallest)
+	
+	html, body
+		min-width: 320px
+		
+	.team__item, .plans__item
+		width: 80%
+		margin: 20px auto
+	.plans__list
+		flex-wrap: wrap
