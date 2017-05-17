@@ -340,10 +340,6 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer; }
-  .submit__btn:after {
-    content: "";
-      content-display: block;
-      content-clear: both; }
 
 @media screen and (max-width: 1040px) {
   #name, #email {

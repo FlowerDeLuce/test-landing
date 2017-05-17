@@ -1,8 +1,7 @@
 {
   "name": "project",
   "version": "1.0.0",
-  "description": "my first gulp priject",
-  "main": "index.js",
+  "description": "landing",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
