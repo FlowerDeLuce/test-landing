@@ -68,7 +68,6 @@ body {
   box-sizing: border-box;
   width: 100%;
   margin: 0 auto;
-  min-height: 100vh;
   position: relative; }
 
 .banner__slider {
@@ -78,8 +77,7 @@ body {
   width: 100%; }
   .slider-item img {
     width: 100%;
-    min-height: 100vh;
-    height: 565px; }
+    min-height: 100vh; }
 
 .slick-arrow {
   position: absolute;
@@ -99,6 +97,7 @@ body {
 
 .banner__text {
   width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   display: flex;
@@ -426,11 +425,12 @@ body {
     top: 60px;
     transition: all .5s; }
   .banner__heading {
-    font-size: 40px; }
+    font-size: 40px;
+    margin-top: 5vh; }
   .banner__description {
     font-size: 18px; }
   .slider-item img {
-    height: 90vh;
+    height: 100vh;
     min-height: 320px; }
   .section__heading {
     font-size: 26px; }
@@ -471,7 +471,6 @@ body {
 
 @media screen and (max-width: 640px) {
   .banner__heading {
-    margin-top: 50px;
     margin-left: 0;
     font-size: 32px; }
   .banner__description {
@@ -483,9 +482,19 @@ body {
 
 @media screen and (max-width: 480px) {
   html, body {
-    min-width: 320px; }
+    min-width: 250px; }
+  .banner__heading {
+    font-size: 28px; }
   .team__item, .plans__item {
     width: 80%;
     margin: 20px auto; }
   .plans__list {
-    flex-wrap: wrap; } }
+    flex-wrap: wrap; }
+  .slider-item img {
+    min-height: auto; }
+  .banner__slider__next {
+    margin-right: 10px; }
+  .banner__slider__prev {
+    margin-left: 10px; }
+  .banner__text {
+    height: 100%; } }
