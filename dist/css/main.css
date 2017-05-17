@@ -300,6 +300,8 @@ body {
 
 .contacts__form-holder {
   width: 48%; }
+  .contacts__form-holder input {
+    outline: none; }
 
 .top-form {
   display: flex;
@@ -427,6 +429,11 @@ body {
     font-size: 40px; }
   .banner__description {
     font-size: 18px; }
+  .slider-item img {
+    height: 90vh;
+    min-height: 320px; }
+  .section__heading {
+    font-size: 26px; }
   .team {
     padding-top: 0; }
   .team__list {
@@ -465,7 +472,8 @@ body {
 @media screen and (max-width: 640px) {
   .banner__heading {
     margin-top: 50px;
-    font-size: 24px; }
+    margin-left: 0;
+    font-size: 32px; }
   .banner__description {
     font-size: 14px;
     max-width: 55%; }
