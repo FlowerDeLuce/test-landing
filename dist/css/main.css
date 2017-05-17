@@ -39,7 +39,8 @@ body {
 
 .main-menu {
   display: inline-block;
-  vertical-align: middle; }
+  vertical-align: middle;
+  position: relative; }
 
 .main-menu__item {
   display: inline-block;
@@ -59,6 +60,9 @@ body {
     background-color: #f8f9fb;
     border-bottom: 3px solid #49cbcd;
     padding-bottom: 37px; }
+
+.main-menu--mobile {
+  display: none; }
 
 .banner {
   box-sizing: border-box;
@@ -337,6 +341,10 @@ body {
       content-display: block;
       content-clear: both; }
 
+@media screen and (max-width: 1040px) {
+  #name, #email {
+    width: 48%; } }
+
 @media screen and (max-width: 980px) {
   /* section main */
   .main-menu__item:last-child {
@@ -353,6 +361,65 @@ body {
     font-size: 18px; } }
 
 @media screen and (max-width: 780px) {
+  .main-menu--mobile {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 98px;
+    right: 0;
+    top: 0;
+    cursor: pointer; }
+    .main-menu--mobile span {
+      display: block;
+      width: 30px;
+      height: 2px;
+      background: #49cbcd;
+      border-radius: 1px;
+      position: absolute; }
+    .main-menu--mobile.active .main-menu--mobile-middle {
+      opacity: 0;
+      transition: all .5s; }
+    .main-menu--mobile.active .main-menu--mobile-top {
+      top: 45px;
+      transform: rotate(45deg);
+      transition: all .5s; }
+    .main-menu--mobile.active .main-menu--mobile-bottom {
+      top: 45px;
+      transform: rotate(-45deg);
+      transition: all .5s; }
+  .main-menu__list {
+    display: block;
+    position: absolute;
+    top: 97px;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    right: -500px;
+    transition: all .5s; }
+  .main-menu__list.active {
+    right: 0;
+    transition: all .5s; }
+  .main-menu__item {
+    display: block;
+    background: #fff;
+    width: 100%;
+    max-width: 320px; }
+  .main-menu__link {
+    padding: 10px 30px;
+    display: block;
+    width: 100%; }
+    .main-menu__link:hover {
+      padding-bottom: 7px; }
+  .main-menu--mobile-top {
+    top: 40px;
+    transition: all .5s; }
+  .main-menu--mobile-middle {
+    top: 50px;
+    opacity: 1;
+    transition: all .5s; }
+  .main-menu--mobile-bottom {
+    top: 60px;
+    transition: all .5s; }
   .team__list {
     flex-wrap: wrap; }
   .team__item {

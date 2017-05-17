@@ -1,6 +1,12 @@
 $break-small: 640px
 $break-medium: 780px
 $break-large: 980px
+$break-big: 1040px
+
+@media screen and (max-width: $break-big) 
+	#name, #email
+		width: 48%
+
 
 @media screen and (max-width: $break-large) 
 
@@ -27,6 +33,77 @@ $break-large: 980px
 
 
 @media screen and (max-width: $break-medium) 
+	
+	.main-menu--mobile
+		position: absolute
+		display: block
+		width: 40px
+		height: 98px
+		right: 0
+		top: 0
+		cursor: pointer
+		span
+			display: block
+			width: 30px
+			height: 2px
+			background: #49cbcd
+			border-radius: 1px
+			position: absolute
+		&.active
+			.main-menu--mobile-middle
+				opacity: 0
+				transition: all .5s
+			.main-menu--mobile-top
+				top: 45px
+				transform: rotate(45deg)
+				transition: all .5s	
+			.main-menu--mobile-bottom
+				top: 45px
+				transform: rotate(-45deg)
+				transition: all .5s		
+
+	.main-menu__list
+		display: block
+		position: absolute
+		top: 97px
+		width: 100%
+		max-width: 320px
+		text-align: center
+		right: -500px
+		transition: all .5s
+  		
+
+	.main-menu__list.active	
+		
+		right: 0
+		transition: all .5s	
+	    
+	.main-menu__item
+		display: block	
+		background: #fff
+		width: 100%
+		max-width: 320px
+
+	.main-menu__link
+		padding: 10px 30px
+		display: block	
+		width: 100%
+		&:hover
+			padding-bottom: 7px	
+
+	.main-menu--mobile-top
+		top: 40px
+		transition: all .5s
+
+	.main-menu--mobile-middle			
+		top: 50px
+		opacity: 1
+		transition: all .5s
+
+	.main-menu--mobile-bottom
+		top: 60px
+		transition: all .5s	
+
 	.team__list
 		flex-wrap: wrap
 		

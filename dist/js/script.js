@@ -16,5 +16,9 @@ dots: false,
 		function(){
 			$(this).parent('.plans__item').find('.plans__item__heading').css({'backgroundColor' : '#485460'});
 });
-	
+	$('.main-menu--mobile').click( function(){
+		$(this).toggleClass('active');
+		$('.main-menu__list').toggleClass('active');
+	});
+
 });
