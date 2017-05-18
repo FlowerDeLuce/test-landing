@@ -1,4 +1,6 @@
 
+@import "mixins"
+
 @font-face
 	font-family: "Lobster"
 	src: url('fonts/Lobster.ttf')
@@ -22,8 +24,8 @@ body
 	height: 98px
 	margin-top: -98px	
 .header-container
-	display: flex
-	justify-content: space-between
+	@include flexbox
+	@include justifyContentSpaceBetween
 	max-width: 1440px
 	margin: 0 auto
 	height: 98px
@@ -42,9 +44,12 @@ body
 	vertical-align: middle
 	position: relative
 
+.main-menu__list
+	height: 98px
 .main-menu__item
 	display: inline-block
 	list-style-type: none
+	height: 98px
 	&:last-child
 		margin-right: 115px	
 	
@@ -52,6 +57,7 @@ body
 .main-menu__link
 	box-sizing: border-box
 	display: inline-block
+	height: 98px
 	font-size: 15px
 	color: #484c55
 	text-decoration: none
@@ -60,7 +66,7 @@ body
 	&:hover
 		background-color: #f8f9fb
 		border-bottom: 3px solid #49cbcd
-		padding-bottom: 38px
+		padding-bottom: 37px
 	
 .main-menu--mobile
 	display: none
@@ -83,10 +89,6 @@ body
 		min-height: 100vh
 		
 
-	
-	
-		
-
 .slick-arrow
 	position: absolute
 	top: 50%
@@ -107,11 +109,12 @@ body
 	width: 100%
 	position: absolute
 	top: 0
-	display: flex
-	flex-wrap: wrap
-	flex-direction: column
-	justify-content: center
-	align-items: center
+	height: 100%
+	@include flexbox
+	@include flexWrap
+	@include flexDirectionColumn
+	@include justifyContentCenter
+	@include alignItemsCenter
 	padding-bottom: 20px
 
 .banner__heading
@@ -148,9 +151,10 @@ body
 	padding-top: 100px
 
 .team__list
-	display: flex
-	justify-content: space-between
+	@include flexbox
+	@include justifyContentSpaceBetween
 	flex-wrap: nowrap
+	-ms-flex-wrap: none
 	margin-bottom: 100px
 
 .section__heading
@@ -167,6 +171,7 @@ body
 .team__item
 	margin-top: 30px
 	text-align: center
+	width: 25%
 	span
 		display: block
 
@@ -193,8 +198,8 @@ body
 	background: #f1f1f1
 
 .plans__list
-	display: flex
-	justify-content: space-between;
+	@include flexbox
+	@include justifyContentSpaceBetween;
 	width: 100%
 	padding: 120px 0  100px
 
@@ -260,9 +265,9 @@ body
 
 .contacts__holder
 	margin-top: 100px
-	display: flex
+	@include flexbox
 	padding-top: 5px
-	justify-content: space-between
+	@include justifyContentSpaceBetween
 
 .contacts__info__heading
 	font-family: 'Open sans', sans-serif
@@ -279,16 +284,20 @@ body
 
 .social-list
 	margin: 40px 0 20px -3px
-	display: flex
+	@include flexbox
+
+
 
 .social-item
 	margin-right: 15px
+	display: inline-block
 	&:last-child
 		margin-right: 0
 
 .social-pic
 	width: 40px
 	height: 40px
+	border: none
 
 .contacts__info
 	width: 50%
@@ -314,14 +323,15 @@ body
 
 
 .top-form
-	display: flex
-	justify-content: space-between
+	@include flexbox
+	@include justifyContentSpaceBetween
 	margin-bottom: 30px
+	max-width: 100%
 
 #name, #email
 	padding: 15px 20px
 	display: block	
-	flex-grow: 1
+	@include flexGrow(1)
 #name
 	margin-right: 30px
 

@@ -6,16 +6,19 @@ $break-large: 1040px
 
 @media screen and (max-width: $break-large) 
 	#name, #email
-		width: 48%
+		width: 50px
+		-moz-box-sizing: border-box
+	    -webkit-box-sizing: border-box
+	    box-sizing: border-box
+	    display: block
 
 
 @media screen and (max-width: $break-big) 
 
-	/* section main */
-
 	.main-menu__item
 		&:last-child
 			margin-right: 15px	
+
 
 	/* section team */
 
@@ -84,10 +87,12 @@ $break-large: 1040px
 		background: #fff
 		width: 100%
 		max-width: 320px
+		height: auto
 
 	.main-menu__link
 		padding: 10px 30px
-		display: block	
+		height: auto
+		display: inline-block	
 		width: 100%
 		&:hover
 			padding-bottom: 7px	
@@ -123,7 +128,7 @@ $break-large: 1040px
 		padding-top: 0	
 
 	.team__list
-		flex-wrap: wrap
+		@include flexWrap
 		
 	.team__item
 		width: 45%
@@ -141,8 +146,10 @@ $break-large: 1040px
 
 	.contacts__holder
 		margin-top: 0
-		flex-wrap: wrap
-		justify-content: center
+		@include flexbox
+		@include flexWrap
+		@include justifyContentCenter
+		text-align: center
 
 	.contacts__info
 		width: 98%
@@ -151,13 +158,15 @@ $break-large: 1040px
 
 	.social-list
 		width: 98%
-		justify-content: center
+		@include justifyContentCenter
 
 	.contacts__form-holder
 		width: 98%
-		margin: 20px auto 0
+		margin-left: 0
+		margin-top: 20px
 		max-width: 500px
 		text-align: center
+
 
 	.submit__btn
 		float: none
@@ -191,7 +200,7 @@ $break-large: 1040px
 		width: 80%
 		margin: 20px auto
 	.plans__list
-		flex-wrap: wrap
+		@include flexWrap
 
 	.slider-item
 		img

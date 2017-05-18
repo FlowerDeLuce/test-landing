@@ -1,0 +1,40 @@
+@mixin flexbox 
+	display: -webkit-box
+	display: -moz-box
+	display: -ms-flexbox
+	display: -webkit-flex
+	display: flex
+
+@mixin justifyContentCenter
+	justify-content: center
+	-ms-flex-pack: center
+
+@mixin justifyContentSpaceBetween
+	justify-content: space-between;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+
+@mixin flexDirectionColumn
+	flex-direction: column
+	-webkit-box-orient: vertical
+	-webkit-box-direction: normal
+	-webkit-flex-direction: column
+	-ms-flex-direction: column
+
+@mixin flexWrap
+	flex-wrap: wrap
+	-webkit-flex-wrap: wrap
+	-ms-flex-wrap: wrap
+
+@mixin alignItemsCenter
+	align-items: center
+	-webkit-box-align: center
+	-webkit-align-items: center
+	-ms-flex-align: center
+
+@mixin flexGrow($n)	
+	flex-grow: $n;
+	-webkit-box-flex: $n;
+	-webkit-flex-grow: $n;
+	-ms-flex-positive: $n;
