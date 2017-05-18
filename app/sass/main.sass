@@ -113,20 +113,21 @@ body
 	@include flexbox
 	flex-wrap: nowrap
 	@include flexDirectionColumn
-	@include justifyContentCenter
+	@include justifyContentSpaceBetween
 	@include alignItemsCenter
 	padding-bottom: 20px
 
 .banner__heading
-	margin-left: -20px
+	margin-left: 20px
 	font-family: 'Open sans', sans-serif
-	font-weight: normal
+	font-weight: 600
 	font-size: 63px
 	color: #fff
-	margin-top: 120px
+	margin-top: 130px
 	
 .banner__description 
 	color: #fff
+	display: block
 	margin-top: 40px
 	line-height: 37px
 	max-width: 30%
@@ -136,7 +137,8 @@ body
 	font-weight: 400
 	
 .banner__btn
-	margin-top: 60px
+	margin: 50px auto 100px
+
 	color: #fff
 	border: 3px solid #fff
 	border-radius: 5px
@@ -158,6 +160,28 @@ body
 	flex-wrap: nowrap
 	-ms-flex-wrap: none
 	margin-bottom: 100px
+
+.team__item__pic
+	position: relative
+	display: block
+	text-decoration: none
+	img
+		border: none
+	&:before
+		content: '+'
+		width: 100%
+		position: absolute
+		font-size: 85px
+		line-height: 0
+		font-weight: bold
+		color: #f46d6d
+		top: 50%
+		right: 0
+		display: none
+	&:hover:before
+		display: block	
+		
+
 
 .section__heading
 	font-size: 42px

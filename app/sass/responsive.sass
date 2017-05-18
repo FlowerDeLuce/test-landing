@@ -3,10 +3,16 @@ $break-small: 640px
 $break-medium: 780px
 $break-big: 980px
 $break-large: 1080px
+$break-very-big: 1380px
+
+@media screen and (min-width: $break-very-big) 
+	.banner__text
+		@include justifyContentCenter
+	
 
 @media screen and (max-width: $break-large) 
 	.banner__heading
-		margin-top: 2vh
+		margin-top: 10vh
 
 	.banner__description
 		max-width: 50%	
@@ -30,11 +36,13 @@ $break-large: 1080px
 		margin: 50px auto
 
 	
-	.team__item__pic
+	.team__item__pic img, .team__item__pic
 		display: block
 		width: 150px
-		height: 150px	
+		height: 150px
+		margin: 0 auto
 
+	
 	.team__item__name	
 		margin-top: 20px
 		font-size: 18px
@@ -116,7 +124,7 @@ $break-large: 1080px
 
 	.banner__heading
 		font-size: 40px
-		margin-top: 5vh
+		
 
 	.banner__description	
 		font-size: 18px
@@ -180,8 +188,7 @@ $break-large: 1080px
 @media screen and (max-width: $break-small) 
 	
 	.banner__heading
-		
-		margin-left: 0
+		margin-top: 100px
 		font-size: 32px
 
 	.banner__description
