@@ -2,9 +2,15 @@ $break-smallest: 480px
 $break-small: 640px
 $break-medium: 780px
 $break-big: 980px
-$break-large: 1040px
+$break-large: 1080px
 
 @media screen and (max-width: $break-large) 
+	.banner__heading
+		margin-top: 2vh
+
+	.banner__description
+		max-width: 50%	
+
 	#name, #email
 		width: 50px
 		-moz-box-sizing: border-box
@@ -19,9 +25,7 @@ $break-large: 1040px
 		&:last-child
 			margin-right: 15px	
 
-
-	/* section team */
-
+	
 	.section__heading
 		margin: 50px auto
 
