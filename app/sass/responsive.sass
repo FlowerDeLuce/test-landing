@@ -2,13 +2,9 @@ $break-smallest: 480px
 $break-small: 640px
 $break-medium: 780px
 $break-big: 980px
-$break-large: 1080px
-$break-very-big: 1380px
+$break-large: 1180px
 
-@media screen and (min-width: $break-very-big) 
-	.banner__text
-		@include justifyContentCenter
-	
+
 
 @media screen and (max-width: $break-large) 
 	.banner__heading
@@ -26,6 +22,9 @@ $break-very-big: 1380px
 
 
 @media screen and (max-width: $break-big) 
+	
+	.banner__heading
+		font-size: 46px;
 
 	.main-menu__item
 		&:last-child
@@ -122,12 +121,17 @@ $break-very-big: 1380px
 		top: 60px
 		transition: all .5s	
 
+
+		
 	.banner__heading
 		font-size: 40px
 		
 
 	.banner__description	
 		font-size: 18px
+
+	.banner__btn
+		margin-top: 40px	
 
 	.slider-item img 
 		height: 100vh
@@ -187,8 +191,12 @@ $break-very-big: 1380px
 
 @media screen and (max-width: $break-small) 
 	
+	.banner__text
+		@include justifyContentCenter
+
 	.banner__heading
 		margin-top: 100px
+		margin-left: 0
 		font-size: 32px
 
 	.banner__description
@@ -202,7 +210,7 @@ $break-very-big: 1380px
 @media screen and (max-width: $break-smallest)
 	
 	html, body
-		min-width: 250px
+		min-width: 320px
 
 	.banner__heading 
 		font-size: 28px;
